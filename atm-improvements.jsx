@@ -55,7 +55,7 @@ const Account = () => {
       <>
         <h2 id="total">{status}</h2>
         <label>Select an action below to continue</label>
-        <select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
+       { true && (<select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
           <option id="no-selection" value=""></option>
           <option id="deposit-selection" value="Deposit">
             Deposit
@@ -63,7 +63,7 @@ const Account = () => {
           <option id="cashback-selection" value="Cash Back">
             Cash Back
           </option>
-        </select>
+        </select>)}
         {atmMode && (
           <ATMDeposit
             onChange={handleChange}
