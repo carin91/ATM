@@ -62,8 +62,8 @@ const Account = () => {
   return (
     <form onSubmit={handleSubmit}>
       <>
-        <h2 id="total">{status}</h2>
         <label> PIN: </label>
+        <h2 id="total">{status}</h2>
         <Button id={PIN} key={index} onClick={handleVerification}>
         "It's me"
       </Button>
