@@ -62,6 +62,7 @@ const Account = () => {
   return (
     <form onSubmit={handleSubmit}>
       <>
+        <label> PIN: </label>
         <h2 id="total">{status}</h2>
         {/*<label> PIN: </label>
         <Button id={PIN} key={index} onClick={handleVerification}>
