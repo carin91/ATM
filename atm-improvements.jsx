@@ -60,16 +60,20 @@ const Account = () => {
   //};
 
   return (
+    <>
+      <div className="verification">
+      <label> PIN: </label>
+        <button onClick={() => setIsVerified(true)}>It's me</button>
+      </div>
     <form onSubmit={handleSubmit}>
       <>
-        <label> PIN: </label>
-        <button onClick={() => setIsVerified(true)}>It's me</button>
-        {isVerified &&(<h2 id="total">{status}</h2>
+
+        <h2 id="total">{status}</h2>
         {/*<label> PIN: </label>
         <Button id={PIN} key={index} onClick={handleVerification}>
         "It's me"
         </Button>*/}
-      <label>Select an action below to continue</label>
+      {isVerified &&(<label>Select an action below to continue</label>)}
        <select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
           <option id="no-selection" value=""></option>
           <option id="deposit-selection" value="Deposit">
@@ -85,10 +89,11 @@ const Account = () => {
             isDeposit={isDeposit}
             isValid={validTransaction}
           ></ATMDeposit>
-        )}
+        
         )}
       </>
     </form>
+    </>
   );
 };
 // ========================================
