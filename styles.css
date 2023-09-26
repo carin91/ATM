@@ -1,5 +1,5 @@
 button {
-  background-color: #0c80f3;
+  background-color: #999b84;
   width: 150px;
 }
 
@@ -9,13 +9,13 @@ select {
 }
 
 .verification {
-  background: #556d5d;
+  background: #ddb7ab;
   padding: 30px;
   height: 20vh;
 }
 
 .transaction {
-  background: #0c80f3;
+  background: #999b84;
   padding: 30px;
   height: 100vh;
 }
