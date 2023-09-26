@@ -64,12 +64,12 @@ const Account = () => {
       <>
         <label> PIN: </label>
         <button onClick={() => setIsVerified(true)}>It's me</button>
-        <h2 id="total">{status}</h2>
+        {isVerified &&(<h2 id="total">{status}</h2>
         {/*<label> PIN: </label>
         <Button id={PIN} key={index} onClick={handleVerification}>
         "It's me"
         </Button>*/}
-      {isVerified && (<label>Select an action below to continue</label>)}
+      <label>Select an action below to continue</label>
        <select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
           <option id="no-selection" value=""></option>
           <option id="deposit-selection" value="Deposit">
@@ -85,6 +85,7 @@ const Account = () => {
             isDeposit={isDeposit}
             isValid={validTransaction}
           ></ATMDeposit>
+        )}
         )}
       </>
     </form>
