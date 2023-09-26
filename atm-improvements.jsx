@@ -52,8 +52,6 @@ const Account = () => {
   };
 
   const handleVerification = (event) => {
-    setAtmMode(event.target.value);
-    setValidTransaction(false);
     if (e.target.innerHTML) {
       setIsVerified(true);
     } else {
@@ -67,7 +65,7 @@ const Account = () => {
         <h2 id="total">{status}</h2>
         <label> PIN: </label>
         <Button id={PIN} key={index} onClick={handleVerification}>
-        It's me
+        "It's me"
       </Button>
       { isVerified && (<label>Select an action below to continue</label>)}
        { isVerified && (<select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
