@@ -17,7 +17,7 @@ const Account = () => {
   const [isDeposit, setIsDeposit] = React.useState(true);
   const [atmMode, setAtmMode] = React.useState('');
   const [validTransaction, setValidTransaction] = React.useState(false);
-  const [isVerified, setIsVerified] = React.useState(false);
+  //const [isVerified, setIsVerified] = React.useState(false);
 
   let status = `Account Balance $ ${totalState} `;
   console.log(`Account Rendered with isDeposit: ${isDeposit}`);
@@ -51,22 +51,22 @@ const Account = () => {
     }
   };
 
-  const handleVerification = (event) => {
-    if (e.target.innerHTML) {
-      setIsVerified(true);
-    } else {
-      setIsVerified(false);
-    }
-  };
+  //const handleVerification = (event) => {
+   // if (e.target.innerHTML) {
+    //  setIsVerified(true);
+    //} else {
+    //  setIsVerified(false);
+    //}
+  //};
 
   return (
     <form onSubmit={handleSubmit}>
       <>
-        <label> PIN: </label>
         <h2 id="total">{status}</h2>
+        {/*<label> PIN: </label>
         <Button id={PIN} key={index} onClick={handleVerification}>
         "It's me"
-        </Button>
+        </Button>*/}
       <label>Select an action below to continue</label>
        <select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
           <option id="no-selection" value=""></option>
