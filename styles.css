@@ -11,6 +11,12 @@ select {
 .verification {
   background: #556d5d;
   padding: 30px;
+  height: 20vh;
+}
+
+.transaction {
+  background: #0c80f3;
+  padding: 30px;
   height: 100vh;
 }
 
